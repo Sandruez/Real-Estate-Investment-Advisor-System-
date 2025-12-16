@@ -292,7 +292,7 @@ input_df = pd.DataFrame([{
     'Locality_Median_Price_per_sqft': Locality_Median_Price_per_sqft,
     'Investment_Score': Investment_Score,
     'Amenity_Count': Amenity_Count,
-     'Locality Property Count':Locality_Property_Count, 
+     'Locality_Property_Count':Locality_Property_Count, 
     'Locality_Avg_Age' :Locality_Avg_Age,
     'Locality_Avg_BHK' : Locality_Avg_BHK,
     'Locality_Amenity_Density':Locality_Amenity_Density
@@ -313,6 +313,7 @@ if st.button("🚀 Predict"):
     else:
         price = reg_model.predict(input_df)[0]
         st.success(f"💰 Estimated 5-Year Future Price: **₹ {price:,.2f} Lakhs**")
+
 
 
 
