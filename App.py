@@ -300,12 +300,15 @@ if st.button("🚀 Predict"):
     if mode == "Investment Classification":
         pred = clf_model.predict(input_df)[0]
         prob = clf_model.predict_proba(input_df).max()
-        st.success(f"🏷 Investment Category: **{if(pred):'Profitable Investement' else:'Riski Investment'}**")
+        result="Profitable Investement" if pred else:'Riski Investment'
+        # if(pred):result='Profitable Investement' else:result='Riski Investment'
+        st.success(f"🏷 Investment Category: **{Result}**")
         st.info(f"Confidence: **{prob:.2%}**")
 
     else:
         price = reg_model.predict(input_df)[0]
         st.success(f"💰 Estimated 5-Year Future Price: **₹ {price:,.2f} Lakhs**")
+
 
 
 
