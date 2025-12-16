@@ -244,18 +244,18 @@ c7, c8, c9,c10 = st.columns(4)
 
 with c7:
     Locality_Median_Price = st.number_input("Locality Median Price", 0.0)
-with c8:
-    Locality_Median_Price_per_sqft = st.number_input("Locality Median Price / SqFt", 0.0)
-with c9:
-    Investment_Score = st.slider("Investment Score", 0, 100, 50)
-with c10:
     Locality_Property_Count = st.number_input(
     "Locality Property Count", min_value=0, step=1)
-    Locality_Avg_Age = st.number_input(
+with c8:
+    Locality_Median_Price_per_sqft = st.number_input("Locality Median Price / SqFt", 0.0)
+     Locality_Avg_Age = st.number_input(
     "Average Property Age in Locality", min_value=0.0)
-    Locality_Avg_BHK = st.number_input(
+with c9:
+    Investment_Score = st.slider("Investment Score", 0, 100, 50)
+  Locality_Avg_BHK = st.number_input(
     "Average BHK in Locality", min_value=0.0)
-    Locality_Amenity_Density = st.number_input(
+with c10:
+      Locality_Amenity_Density = st.number_input(
     "Locality Amenity Density", min_value=0.0)
    
 
@@ -289,7 +289,7 @@ input_df = pd.DataFrame([{
     'Locality_Median_Price_per_sqft': Locality_Median_Price_per_sqft,
     'Investment_Score': Investment_Score,
     'Amenity_Count': Amenity_Count,
-     'Locality_Property_Count':Locality_Property_Count, 
+    'Locality_Property_Count':Locality_Property_Count, 
     'Locality_Avg_Age' :Locality_Avg_Age,
     'Locality_Avg_BHK' : Locality_Avg_BHK,
     'Locality_Amenity_Density':Locality_Amenity_Density
@@ -310,6 +310,7 @@ if st.button("🚀 Predict"):
     else:
         price = reg_model.predict(input_df)[0]
         st.success(f"💰 Estimated 5-Year Future Price: **₹ {price:,.2f} Lakhs**")
+
 
 
 
