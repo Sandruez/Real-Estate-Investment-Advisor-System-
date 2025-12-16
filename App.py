@@ -240,7 +240,7 @@ with c6:
 # Locality Intelligence
 # -----------------------------
 st.subheader("📊 Locality Intelligence")
-c7, c8, c9,c10,c11,c12,c13 = st.columns(7)
+c7, c8, c9,c10 = st.columns(4)
 
 with c7:
     Locality_Median_Price = st.number_input("Locality Median Price", 0.0)
@@ -251,13 +251,10 @@ with c9:
 with c10:
     Locality_Property_Count = st.number_input(
     "Locality Property Count", min_value=0, step=1)
-with c11:
     Locality_Avg_Age = st.number_input(
     "Average Property Age in Locality", min_value=0.0)
-with c12:
     Locality_Avg_BHK = st.number_input(
     "Average BHK in Locality", min_value=0.0)
-with c13:
     Locality_Amenity_Density = st.number_input(
     "Locality Amenity Density", min_value=0.0)
    
@@ -313,6 +310,7 @@ if st.button("🚀 Predict"):
     else:
         price = reg_model.predict(input_df)[0]
         st.success(f"💰 Estimated 5-Year Future Price: **₹ {price:,.2f} Lakhs**")
+
 
 
 
