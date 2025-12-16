@@ -224,7 +224,7 @@ with c4:
     Security = st.selectbox("Security", ["Yes", "No"])
 
 with c5:
-    Availability_Status = st.selectbox("Availability Status", ["Yes", "No"])
+    Availability_Status = st.selectbox("Availability Status", ['Under_Construction', 'Ready_to_Move'])
     Facing = st.selectbox("Facing", ORDINAL_COLS["Facing"])
     Public_Transport_Accessibility = st.selectbox(
         "Public Transport Accessibility",
@@ -296,4 +296,5 @@ if st.button("🚀 Predict"):
     else:
         price = reg_model.predict(input_df)[0]
         st.success(f"💰 Estimated 5-Year Future Price: **₹ {price:,.2f} Lakhs**")
+
 
