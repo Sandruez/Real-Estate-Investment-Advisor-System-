@@ -1,5 +1,6 @@
-streamlit
+python==3.10
+scikit-learn==1.4.2
+numpy
 pandas
 joblib
-category_encoders
-scikit_learn
+streamlit
