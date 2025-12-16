@@ -240,7 +240,7 @@ with c6:
 # Locality Intelligence
 # -----------------------------
 st.subheader("📊 Locality Intelligence")
-c7, c8, c9 = st.columns(3)
+c7, c8, c9,c10,c11,c12,c13 = st.columns(7)
 
 with c7:
     Locality_Median_Price = st.number_input("Locality Median Price", 0.0)
@@ -250,8 +250,7 @@ with c9:
     Investment_Score = st.slider("Investment Score", 0, 100, 50)
 with c10:
     Locality_Property_Count = st.number_input(
-    "Locality Property Count", min_value=0, step=1
-)
+    "Locality Property Count", min_value=0, step=1)
 with c11:
     Locality_Avg_Age = st.number_input(
     "Average Property Age in Locality", min_value=0.0)
@@ -292,7 +291,11 @@ input_df = pd.DataFrame([{
     'Locality_Median_Price': Locality_Median_Price,
     'Locality_Median_Price_per_sqft': Locality_Median_Price_per_sqft,
     'Investment_Score': Investment_Score,
-    'Amenity_Count': Amenity_Count
+    'Amenity_Count': Amenity_Count,
+     'Locality Property Count':Locality_Property_Count, 
+    'Locality_Avg_Age' :Locality_Avg_Age,
+    'Locality_Avg_BHK' : Locality_Avg_BHK,
+    'Locality_Amenity_Density':Locality_Amenity_Density
 }])
 
 # -----------------------------
@@ -310,6 +313,7 @@ if st.button("🚀 Predict"):
     else:
         price = reg_model.predict(input_df)[0]
         st.success(f"💰 Estimated 5-Year Future Price: **₹ {price:,.2f} Lakhs**")
+
 
 
 
