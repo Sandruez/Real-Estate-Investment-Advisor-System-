@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 import category_encoders
 import sklearn
-
+import xgboost
 
 
 PROPERTY_TYPES = ['Independent House', 'Apartment', 'Villa']
@@ -296,3 +296,4 @@ if st.button("🚀 Predict"):
     else:
         price = reg_model.predict(input_df)[0]
         st.success(f"💰 Estimated 5-Year Future Price: **₹ {price:,.2f} Lakhs**")
+
