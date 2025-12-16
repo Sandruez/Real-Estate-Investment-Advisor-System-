@@ -4,5 +4,6 @@ pandas
 joblib
 streamlit
 category_encoders
+xgboost
 
 
