@@ -6,9 +6,10 @@ xgboost
 scikit-learn
 standard-imghdr
 altair<5
-Python ==3.10
+Python ==3.7
 sklearn ==0.24.2
 numpy
+
 
 
 
