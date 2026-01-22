@@ -5,7 +5,9 @@ streamlit
 category_encoders
 xgboost
 scikit-learn
+standard-imghdr
 altair<5
+
 
 
 
