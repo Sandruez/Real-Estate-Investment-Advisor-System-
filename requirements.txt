@@ -7,8 +7,9 @@ scikit-learn
 standard-imghdr
 altair<5
 Python ==3.10
-scikit-learn ==1.0.2
+sklearn ==1.0.2
 numpy
+
 
 
 
