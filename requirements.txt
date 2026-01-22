@@ -5,6 +5,8 @@ streamlit
 category_encoders
 xgboost
 scikit-learn
+altair<5
+
 
 
 
