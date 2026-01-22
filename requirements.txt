@@ -4,8 +4,8 @@ joblib
 streamlit
 category_encoders
 xgboost
-altair==4.2.2
 scikit-learn
+
 
 
 
