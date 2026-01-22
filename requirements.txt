@@ -5,7 +5,8 @@ streamlit
 category_encoders
 xgboost
 altair>=5.0.0
-scikit-learn==1.3.2
+scikit-learn
+
 
 
 
